@@ -28,7 +28,7 @@ class _SplashNubankState extends State<SplashNubank>
     _controller.addListener(() {
       setState(() {});
     });
-    Future.delayed(Duration(milliseconds: 1000), () {
+    Future.delayed(Duration(seconds: 1), () {
       _controller.forward();
     });
   }
