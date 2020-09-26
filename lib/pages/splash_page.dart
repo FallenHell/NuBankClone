@@ -37,7 +37,7 @@ class _SplashNubankState extends State<SplashNubank>
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Theme.of(context).primaryColor,
+        color: Theme.of(context).primaryColorDark,
         child: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,

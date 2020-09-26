@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
       title: 'Nubank Clone',
       theme: ThemeData(
         primaryColor: Color.fromRGBO(153, 51, 153, 1),
+        primaryColorDark: Color.fromRGBO(97, 47, 116, 1),
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
