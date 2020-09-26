@@ -10,11 +10,15 @@ class RootPage extends StatelessWidget {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        child: Column(
+        child: Stack(
           children: [
+            Column(
+              children: [
+                Container(height: MediaQuery.of(context).size.height * 0.75),
+                HorizontalMenu()
+              ],
+            ),
             NubankAppBar(),
-            Container(height: MediaQuery.of(context).size.height * 0.75),
-            Positioned(bottom: 0, child: HorizontalMenu())
           ],
         ),
       ),
