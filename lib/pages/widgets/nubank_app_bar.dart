@@ -45,8 +45,8 @@ class _NubankAppBarState extends State<NubankAppBar>
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Theme.of(context).primaryColorDark,
-      padding: EdgeInsets.only(top: 45),
+      color: Colors.transparent,
+      padding: EdgeInsets.only(top: 35),
       width: MediaQuery.of(context).size.width,
       child: Column(
         children: [
@@ -54,6 +54,7 @@ class _NubankAppBarState extends State<NubankAppBar>
               onTap: startAnimation,
               child: AppBarTitle(data["name"], _expanded)),
           Container(
+            color: Theme.of(context).primaryColorDark,
             height: getContainerSize(),
             width: MediaQuery.of(context).size.width,
             child: OverflowBox(
