@@ -1,6 +1,8 @@
 import 'package:NuBankClone/pages/widgets/app_bar_title.dart';
 import 'package:flutter/material.dart';
 import '../../data.dart';
+import 'app_bar_account_menus.dart';
+import 'app_bar_data.dart';
 
 class NubankAppBar extends StatefulWidget {
   @override
@@ -36,31 +38,32 @@ class _NubankAppBarState extends State<NubankAppBar>
   }
 
   double getContainerSize() {
-    if (_expandContainer.value == 0)
-      return MediaQuery.of(context).size.height * 0.18;
-    else
-      return (MediaQuery.of(context).size.height * 0.18) +
-          (MediaQuery.of(context).size.height * 0.82) * _expandContainer.value;
+    return (MediaQuery.of(context).size.height * 0.90 - 45) *
+        _expandContainer.value;
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-          color: Theme.of(context).primaryColorDark,
-          border: Border(bottom: BorderSide(color: Colors.white))),
+      color: Theme.of(context).primaryColorDark,
       padding: EdgeInsets.only(top: 45),
       width: MediaQuery.of(context).size.width,
-      height: getContainerSize(),
       child: Column(
         children: [
-          GestureDetector(
+          InkWell(
               onTap: startAnimation,
               child: AppBarTitle(data["name"], _expanded)),
           Container(
-            height: 200,
+            height: getContainerSize(),
             width: MediaQuery.of(context).size.width,
-            color: Colors.white,
+            child: OverflowBox(
+              child: Wrap(
+                children: [
+                  AppBarData(data["agency"], data["account"]),
+                  AccountMenus()
+                ],
+              ),
+            ),
           )
         ],
       ),
