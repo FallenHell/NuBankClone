@@ -37,11 +37,6 @@ class _NubankAppBarState extends State<NubankAppBar>
     }
   }
 
-  double getContainerSize() {
-    return (MediaQuery.of(context).size.height * 0.90 - 45) *
-        _expandContainer.value;
-  }
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -55,7 +50,8 @@ class _NubankAppBarState extends State<NubankAppBar>
               child: AppBarTitle(data["name"], _expanded)),
           Container(
             color: Theme.of(context).primaryColorDark,
-            height: getContainerSize(),
+            height: (MediaQuery.of(context).size.height * 0.85 - 45) *
+                _expandContainer.value,
             width: MediaQuery.of(context).size.width,
             child: OverflowBox(
               child: Wrap(

@@ -34,7 +34,7 @@ class AppBarMenuButton extends StatelessWidget {
                       style: TextStyle(color: Colors.white, fontSize: 14)),
                   if (subtitle != null)
                     Text(subtitle,
-                        style: TextStyle(color: Colors.white, fontSize: 8)),
+                        style: TextStyle(color: Colors.white, fontSize: 10)),
                 ],
               ),
               Expanded(child: Container()),

@@ -1,4 +1,5 @@
 import 'package:NuBankClone/pages/widgets/nubank_app_bar.dart';
+import 'package:NuBankClone/pages/widgets/nubank_cards.dart';
 import 'package:NuBankClone/pages/widgets/nubank_horizontal_menu.dart';
 import 'package:flutter/material.dart';
 
@@ -11,11 +12,7 @@ class RootPage extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: Wrap(
-          children: [
-            NubankAppBar(),
-            Container(height: MediaQuery.of(context).size.height * 0.69),
-            HorizontalMenu()
-          ],
+          children: [NubankAppBar(), NubankCards(), HorizontalMenu()],
         ),
       ),
     );
