@@ -40,7 +40,7 @@ class AccountMenus extends StatelessWidget {
             onTap: () {
               print("Clicou em Configurar Cartão");
             },
-            icon: Icon(Icons.credit_card_outlined, color: Colors.white),
+            icon: Icon(Icons.create_new_folder, color: Colors.white),
             title: "Configurar Cartão",
           ),
           myDivider(),
